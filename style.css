@@ -50,8 +50,16 @@
   }
   body {
     margin: 6rem;
+    display: flex;
+    flex-direction: column;
+    
+
   }
-  
+   img {
+     width: 100%;
+     display: block;
+   }
+
   .button{
     cursor: pointer;
     display: inline-block;
@@ -71,10 +79,91 @@
     
   }
 
+  .hero {
+    position: relative;
+  }
+
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: #ffffff; */
+    padding: 2rem;
+    /* text-align: right; */
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-align: right;
+    text-shadow: 1px 1px 10px #fff;
+  }
+
+  .hero p {
+    text-align: right;
+    text-shadow: 1px 1px 10px #000;
+    color: #fff;
+  }
+
   main {
-      margin: 0 auto;
-      padding: 0 1rem;
+    /*   margin: 0 auto;
+      padding: 0 1rem; */
       max-width: 50rem;
+    align-self: center;
+    }
+
+    /* .panel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel .image-wrapper {
+      order: -2;
+    }
+
+    .panel img {
+      height: 100%;
+      object-position: cover;
+    } */
+ 
+    /* card styles */
+    .cards {
+      display: flex;
+    }
+    
+    .card {
+      position: relative; 
+      margin-right: 1rem;
+    }
+
+    .card:last-of-type {
+      margin-right: 0;
+    }
+
+    .cards .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; 
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      background-color:#5b6a56;
+      opacity: 65%;
+      transition: opacity 300ms;
+    }
+
+    .cards p {
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .card:hover .overlay {
+      opacity: 0;
     }
 
 
